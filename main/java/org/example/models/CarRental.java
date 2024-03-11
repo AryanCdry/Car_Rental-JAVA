@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRental {
-    static String DB_URL = "jdbc:sqlite:car.db";
+    static String DB_URL = "jdbc:sqlite:Car.db";
 
     public CarRental() {
         createTableIfNotExists();
     }
 
-    private void createTableIfNotExists() {
+    public void createTableIfNotExists() {
         String createTable = "CREATE TABLE IF NOT EXISTS cars (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "brand TEXT," +
