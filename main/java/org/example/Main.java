@@ -32,7 +32,7 @@ public class Main {
         }
     }
 
-    private static void displayMenu() {
+    public static void displayMenu() {
         System.out.println("\nCar Rental System Menu:");
         System.out.println("1. Add a Car");
         System.out.println("2. Display All Cars");
@@ -43,7 +43,7 @@ public class Main {
         System.out.print("Enter your choice: ");
     }
 
-    private static void addCar() {
+    public static void addCar() {
         System.out.print("Enter the brand: ");
         String brand = scanner.nextLine();
 
@@ -51,13 +51,13 @@ public class Main {
         int price = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Is the car available? (true/false): ");
+        System.out.print("Car available (true/false): ");
         boolean available = scanner.nextBoolean();
         scanner.nextLine();
 
         car.addCar(brand, price, available);
         System.out.println("Car added successfully!");
-    }private static void rentCar() {
+    }public static void rentCar() {
         displayCars();
 
         System.out.print("Enter the ID of the car you want to rent: ");
@@ -76,7 +76,7 @@ public class Main {
         }
     }
 
-    private static void returnCar() {
+    public static void returnCar() {
         System.out.print("Enter the ID of the car you want to return: ");
         int carId = scanner.nextInt();
         scanner.nextLine();
@@ -85,7 +85,7 @@ public class Main {
         System.out.println("Car returned successfully!");
     }
 
-    private static void deleteCar() {
+    public static void deleteCar() {
         System.out.print("Enter the car ID to delete: ");
         int id = scanner.nextInt();
         scanner.nextLine();
@@ -93,7 +93,7 @@ public class Main {
         car.deleteCar(id);
         System.out.println("Car deleted successfully!");
     }
-    private static void displayCars() {
+    public static void displayCars() {
         List<Car> cars = car.getAllCars();
 
         if (cars.isEmpty()) {
