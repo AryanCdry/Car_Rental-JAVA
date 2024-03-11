@@ -18,11 +18,11 @@ public class Main {
             scanner.nextLine();
 
             switch (choice) {
-                case 1 -> addCar();
-                case 2 -> displayCars();
-                case 3 -> deleteCar();
-                case 4 -> rentCar();
-                case 5 -> returnCar();
+                case 1 -> rentCar();
+                case 2 -> returnCar();
+                case 3 -> displayCars();
+                case 4 -> addCar();
+                case 5 -> deleteCar();
                 case 6 -> {
                     System.out.println("Exiting the Car Rental System.");
                     System.exit(0);
@@ -34,11 +34,11 @@ public class Main {
 
     public static void displayMenu() {
         System.out.println("\nCar Rental System Menu:");
-        System.out.println("1. Add a Car");
-        System.out.println("2. Display All Cars");
-        System.out.println("3. Delete a Car");
-        System.out.println("4. Rent a Car");
-        System.out.println("5. Return a Car");
+        System.out.println("1. Rent a Car");
+        System.out.println("2. Return a Car");
+        System.out.println("3. Display All Cars");
+        System.out.println("4. Add a Car");
+        System.out.println("5. Delete a Car");
         System.out.println("6. Exit");
         System.out.print("Enter your choice: ");
     }
